@@ -3,15 +3,15 @@
 
 <div class="card-columns">
   <div class="card-group">
-    <div class="card btn" *ngFor="let myhero of heroes">
-      <img src="../../assets/img/aquaman.png" class="card-img-top" alt="Aquaman">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="card btn" *ngFor="let h of hers">
+        <img [src]="h.img" class="card-img-top" [alt]="h.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{h.nombre}}</h5>
+          <p class="card-text">{{h.bio}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{h.aparicion}}</small>
+        </div>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
   </div>
 </div>
